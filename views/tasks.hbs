@@ -1,0 +1,39 @@
+<div class="container-sm">
+	<form>
+		<div class="mb-3">
+			<label class="form-label">User Name</label>
+			<select class="form-select" aria-label="Default select example">
+				<option selected>Open this select menu</option>
+				{{#each user}}
+					<option value={{id}}>{{name}}</option>
+				{{/each}}
+
+			</select>
+		</div>
+		<div class="mb-3">
+			<label class="form-label">Task</label>
+			<input type="text" class="form-control" id="exampleInputPassword1" />
+		</div>
+        <div class="mb-3">
+			<label class="form-label">Task Type</label>
+			<select class="form-select" aria-label="Default select example">
+				<option value="Pending">Pending</option>
+				<option value="Done">Done</option>
+            </select>
+        </div>
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+</div>
+<div class="container-sm mt-3">
+    
+
+<div class="list-group">
+   {{#each task}}
+  <div class="d-flex w-50 justify-content-between shadow-lg p-3 mb-5 bg-body rounded border border-5">
+      <h5 class="mb-1"> NAME:-{{user_name}}</h5>
+      <h5 class="mb-1">Task:-{{task_name}}</h5>
+      <button class="btn btn-primary">Submit</button
+    </div>
+{{/each}}
+  </div>
+  </div>
